@@ -30,9 +30,21 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Page d'accueil : Gestion des visiteurs </h1>
-<div>
+<div id="GestionDeRegion">
+    <select id="lstRegion">
+      <?php
+      foreach ($lesRegions as $regions) {
+         echo $regions->REG_NOM;
+      }
+      
+      
+      
+      ?>  
+        
+        
+    </select>
         <p>Code Region </p> <input type="text">
-</div>
+
         <p>Liebelle Secteur</p> <input type="text">
         
         <p>Nom Region</p> <input type="text">
@@ -41,7 +53,7 @@ and open the template in the editor.
         <input type="button" value="Modifier regions" id="modifier">
         <br>  <br>  <br>  <br>  <br>  <br> 
       
-        
+    </div>    
         <div id="Tableau" align="right">
     
        
