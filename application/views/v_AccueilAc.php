@@ -20,8 +20,16 @@ and open the template in the editor.
                function()
                 {
                     
-                    //$("#tableau").change(function(){ 
-                        
+                    
+                    // Au chargement de la page
+                        getLesRegions();
+                   
+                   //Quand le user change de region dans la liste
+                   $('#lstRegions').change
+                   (
+                           //
+                    );
+                   
                    
                 }
              );
@@ -30,19 +38,9 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Page d'accueil : Gestion des visiteurs </h1>
-<div id="GestionDeRegion">
-    <select id="lstRegion">
-      <?php
-      foreach ($lesRegions as $regions) {
-         echo $regions->REG_NOM;
-      }
-      
-      
-      
-      ?>  
         
-        
-    </select>
+        <div id="divRegions"></div>
+  
         <p>Code Region </p> <input type="text">
 
         <p>Liebelle Secteur</p> <input type="text">
@@ -53,7 +51,7 @@ and open the template in the editor.
         <input type="button" value="Modifier regions" id="modifier">
         <br>  <br>  <br>  <br>  <br>  <br> 
       
-    </div>    
+      
         <div id="Tableau" align="right">
     
        
