@@ -7,9 +7,12 @@ class Ctrl_AccueilVisiteurAc extends CI_Controller{
         $this->load->view('v_AccueilAc',$data);
         
     } 
-    public function getlesvisiteurs(){
+    public function getVueFormulaire (){
        
-        $this->load->view('v_FormulaireVisiteursAc');
+        $codeVisiteur = $this->uri->segment(1);
+        $this->load->model("Model_FormulaireVisiteurs");   
+        $data['visiteur'] = $this->Model_FormulaireVisiteurs->getVisiteurById($codeVisiteur);  
+        $this->load->view('v_FormulaireVisiteursAc',$data);
         
     }
     public function getLesRegions(){
@@ -19,5 +22,5 @@ class Ctrl_AccueilVisiteurAc extends CI_Controller{
         $this->load->view('v_AfficherRegions',$data);
         
     }
- 
+  
     }

@@ -13,6 +13,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <script type="text/javascript" src="JQuery/jquery-3.1.1.js"></script>
          <script type="text/javascript" src="JS/lesFonctions.js"></script>
+         
          <script type="text/javascript">
          
              $
@@ -23,16 +24,19 @@ and open the template in the editor.
                     
                     // Au chargement de la page
                         getLesRegions();
+                        
+//                   
+//                   //Quand le user change de region dans la liste
+//                   $('#lstRegions').change(function() {
+//                       $('#codeRegion').val($('#lstRegions').val()
+//                  });
                    
-                   //Quand le user change de region dans la liste
-                   $('#lstRegions').change
-                   (
-                           //
-                    );
+                  
                    
                    
                 }
              );
+     
          
         </script>
     </head>
@@ -41,11 +45,11 @@ and open the template in the editor.
         
         <div id="divRegions"></div>
   
-        <p>Code Region </p> <input type="text">
+        <p>Code Region </p> <input type="text" disabled="">
 
-        <p>Liebelle Secteur</p> <input type="text">
+        <p>Liebelle Secteur</p> <input type="text" id="codeRegions" disabled="">
         
-        <p>Nom Region</p> <input type="text">
+        <p>Nom Region</p> <input type="text" id="nomRegions">
         
         <br> <br>
         <input type="button" value="Modifier regions" id="modifier">
@@ -71,7 +75,7 @@ and open the template in the editor.
         foreach($lesVisiteurs as $visiteur){
             echo "<tr>";
            
-            echo"<td> <a href='index.php/Ctrl_AccueilVisiteurAc/getlesvisiteurs'>".$visiteur->VIS_MATRICULE."</a></td>";
+            echo"<td> <a href='index.php/Ctrl_AccueilVisiteurAc/getVueFormulaire/$visiteur->VIS_MATRICULE'>".$visiteur->VIS_MATRICULE."</a></td>";
             echo"<td>".$visiteur->VIS_NOM."</td>";
             echo"<td>".$visiteur->Vis_PRENOM."</td>";
             echo"<td>".$visiteur->VIS_VILLE."</td>";
