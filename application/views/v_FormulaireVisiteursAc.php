@@ -35,7 +35,7 @@ and open the template in the editor.
     <body>
         <?php 
         
-     echo"<p> matricule</p> <input type='text' value='".$visiteur->VIS_MATRICULE."'>";
+     echo "<p> matricule</p> <input type='text' value='".$visiteur[0]->VIS_MATRICULE."'>";
         
  
              ?>

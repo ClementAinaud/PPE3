@@ -9,7 +9,7 @@ class Ctrl_AccueilVisiteurAc extends CI_Controller{
     } 
     public function getVueFormulaire (){
        
-        $codeVisiteur = $this->uri->segment(1);
+        $codeVisiteur = $this->uri->segment(3);
         $this->load->model("Model_FormulaireVisiteurs");   
         $data['visiteur'] = $this->Model_FormulaireVisiteurs->getVisiteurById($codeVisiteur);  
         $this->load->view('v_FormulaireVisiteursAc',$data);
@@ -18,7 +18,7 @@ class Ctrl_AccueilVisiteurAc extends CI_Controller{
     public function getLesRegions(){
         //$codeRegion = $_GET['codeRegion'];
         $this->load->model('Model_RegionsAC');
-        $data ['lesRegions'] = $this->Model_RegionsAC->getLesRegions();
+        $data['lesRegions'] = $this->Model_RegionsAC->getLesRegions();
         $this->load->view('v_AfficherRegions',$data);
         
     }
